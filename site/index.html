@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tenline — Ten Years of Filings, One Page</title>
+  <meta name="description" content="Pick any S&P 500 company and see ten fiscal years of fundamentals — revenue, margins, EPS, free cash flow, ROE/ROIC, share count, leverage — straight from SEC EDGAR filings." />
+  <meta property="og:title" content="Tenline — Ten Years of Filings, One Page" />
+  <meta property="og:description" content="Ten fiscal years of fundamentals for any S&P 500 company, straight from SEC EDGAR. No narrative, just the filings." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://debjitmukherjee1.github.io/tenline/" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Tenline — Ten Years of Filings, One Page" />
+  <meta name="twitter:description" content="Ten fiscal years of fundamentals for any S&P 500 company, straight from SEC EDGAR." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <svg class="monogram" viewBox="0 0 48 48" width="46" height="46" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5" />
+        <path d="M13 34V21M19 34V15M25 34V24M31 34V12M37 34V19" fill="none"
+              stroke="var(--accent)" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <div class="brand-text">
+        <h1>Ten<span class="line">line</span></h1>
+        <p class="tagline">Ten years, ten lines, no narrative — just the filings.</p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <div class="updated">Data refreshed <span id="updated-at">—</span></div>
+      <div class="run-note">weekly via <code>GitHub Actions</code> · no server</div>
+    </div>
+  </header>
+
+  <main>
+    <h2>Find a company</h2>
+    <hr class="rule" />
+    <p class="muted">Type a ticker or company name. Ten fiscal years of revenue, margins, EPS, free cash flow, ROE/ROIC, share count and leverage — read straight from each company's own SEC filings, nothing modeled or narrated.</p>
+
+    <div class="search-wrap">
+      <input type="text" id="search-input" class="search-input" placeholder="Ticker or company name — e.g. AAPL, Apple, JPMorgan…" autocomplete="off" aria-label="Search companies" aria-expanded="false" role="combobox" aria-controls="search-results" />
+      <div id="search-results" class="search-results" role="listbox"></div>
+    </div>
+
+    <p class="muted small" id="universe-note" style="text-align:center;margin-top:.6rem;"></p>
+
+    <div id="pilot-grid" class="pilot-grid"></div>
+
+    <p class="disclaimer">⚠ Personal / educational project, not investment advice, not a SEBI-registered research or advisory service. Figures are as filed with the SEC via EDGAR's XBRL data — always verify against the source filing linked on each company's page before relying on a number.</p>
+  </main>
+
+  <footer>
+    <p>Tenline · built by Debjit Mukherjee · <a href="https://github.com/debjitmukherjee1/tenline" target="_blank" rel="noopener">Source on GitHub</a><br>
+    Data: SEC EDGAR XBRL (no key) · Hosting: GitHub Pages · No server, no per-visitor cost.</p>
+    <p class="sibling-links">Also in this suite:
+      <a href="https://debjitmukherjee1.github.io/meridian/" target="_blank" rel="noopener">Meridian</a> ·
+      <a href="https://debjitmukherjee1.github.io/marketpulse/" target="_blank" rel="noopener">MarketPulse</a> ·
+      <a href="https://debjitmukherjee1.github.io/ledger/" target="_blank" rel="noopener">Ledger</a> ·
+      <a href="https://debjitmukherjee1.github.io/abacus/" target="_blank" rel="noopener">Abacus</a>
+    </p>
+  </footer>
+
+  <script src="js/search.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">Tenline — Company</title>
+  <meta name="description" content="Ten fiscal years of fundamentals, straight from SEC EDGAR filings." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"
+          integrity="sha384-9nhczxUqK87bcKHh20fSQcTGD4qq5GhayNYSYWqwBkINBhOfQLg/P5HG5lF1urn4"
+          crossorigin="anonymous"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand-link" href="index.html">
+      <svg class="monogram" viewBox="0 0 48 48" width="46" height="46" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="var(--surface)" stroke="var(--accent)" stroke-width="1.5" />
+        <path d="M13 34V21M19 34V15M25 34V24M31 34V12M37 34V19" fill="none"
+              stroke="var(--accent)" stroke-width="2" stroke-linecap="round" />
+      </svg>
+      <div class="brand-text">
+        <h1>Ten<span class="line">line</span></h1>
+        <p class="tagline">Ten years, ten lines, no narrative — just the filings.</p>
+      </div>
+    </a>
+    <div class="topbar-right">
+      <div class="updated">Data refreshed <span id="updated-at">—</span></div>
+      <a class="back-link" href="index.html">← Search another company</a>
+    </div>
+  </header>
+
+  <main id="app">
+    <p class="muted">Loading…</p>
+  </main>
+
+  <footer>
+    <p>Tenline · built by Debjit Mukherjee · <a href="https://github.com/debjitmukherjee1/tenline" target="_blank" rel="noopener">Source on GitHub</a><br>
+    Data: SEC EDGAR XBRL (no key) · Hosting: GitHub Pages · No server, no per-visitor cost.</p>
+    <p class="sibling-links">Also in this suite:
+      <a href="https://debjitmukherjee1.github.io/meridian/" target="_blank" rel="noopener">Meridian</a> ·
+      <a href="https://debjitmukherjee1.github.io/marketpulse/" target="_blank" rel="noopener">MarketPulse</a> ·
+      <a href="https://debjitmukherjee1.github.io/ledger/" target="_blank" rel="noopener">Ledger</a> ·
+      <a href="https://debjitmukherjee1.github.io/abacus/" target="_blank" rel="noopener">Abacus</a>
+    </p>
+  </footer>
+
+  <script src="js/company.js"></script>
+</body>
+</html>

@@ -1,0 +1,3527 @@
+{
+  "updated_at": "14 Jul 2026 13:44 UTC",
+  "universe_as_of": "2026-07-14",
+  "companies": [
+    {
+      "ticker": "A",
+      "name": "Agilent Technologies",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AAPL",
+      "name": "Apple Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ABBV",
+      "name": "AbbVie",
+      "sector": "Health Care",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ABNB",
+      "name": "Airbnb",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.8143,
+      "years_covered": 7
+    },
+    {
+      "ticker": "ABT",
+      "name": "Abbott Laboratories",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ACGL",
+      "name": "Arch Capital Group",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ACN",
+      "name": "Accenture",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ADBE",
+      "name": "Adobe Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ADI",
+      "name": "Analog Devices",
+      "sector": "Information Technology",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ADM",
+      "name": "Archer Daniels Midland",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ADP",
+      "name": "Automatic Data Processing",
+      "sector": "Industrials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ADSK",
+      "name": "Autodesk",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AEE",
+      "name": "Ameren",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AEP",
+      "name": "American Electric Power",
+      "sector": "Utilities",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AES",
+      "name": "AES Corporation",
+      "sector": "Utilities",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AFL",
+      "name": "Aflac",
+      "sector": "Financials",
+      "coverage_pct": 0.57,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AIG",
+      "name": "American International Group",
+      "sector": "Financials",
+      "coverage_pct": 0.68,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AIZ",
+      "name": "Assurant",
+      "sector": "Financials",
+      "coverage_pct": 0.63,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AJG",
+      "name": "Arthur J. Gallagher & Co.",
+      "sector": "Financials",
+      "coverage_pct": 0.67,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AKAM",
+      "name": "Akamai Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ALB",
+      "name": "Albemarle Corporation",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ALGN",
+      "name": "Align Technology",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ALL",
+      "name": "Allstate",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ALLE",
+      "name": "Allegion",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AMCR",
+      "name": "Amcor",
+      "sector": "Materials",
+      "coverage_pct": 0.9778,
+      "years_covered": 9
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AME",
+      "name": "Ametek",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AMGN",
+      "name": "Amgen",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AMP",
+      "name": "Ameriprise Financial",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AMT",
+      "name": "American Tower",
+      "sector": "Real Estate",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AON",
+      "name": "Aon plc",
+      "sector": "Financials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AOS",
+      "name": "A. O. Smith",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "APA",
+      "name": "APA Corporation",
+      "sector": "Energy",
+      "coverage_pct": 0.0,
+      "years_covered": 0
+    },
+    {
+      "ticker": "APD",
+      "name": "Air Products",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "APH",
+      "name": "Amphenol",
+      "sector": "Information Technology",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "APO",
+      "name": "Apollo Global Management",
+      "sector": "Financials",
+      "coverage_pct": 0.5833,
+      "years_covered": 6
+    },
+    {
+      "ticker": "APP",
+      "name": "AppLovin",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9571,
+      "years_covered": 7
+    },
+    {
+      "ticker": "APTV",
+      "name": "Aptiv",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ARE",
+      "name": "Alexandria Real Estate Equities",
+      "sector": "Real Estate",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ARES",
+      "name": "Ares Management",
+      "sector": "Financials",
+      "coverage_pct": 0.34,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ATO",
+      "name": "Atmos Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AVB",
+      "name": "AvalonBay Communities",
+      "sector": "Real Estate",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "sector": "Information Technology",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AVY",
+      "name": "Avery Dennison",
+      "sector": "Materials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AWK",
+      "name": "American Water Works",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AXON",
+      "name": "Axon Enterprise",
+      "sector": "Industrials",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AXP",
+      "name": "American Express",
+      "sector": "Financials",
+      "coverage_pct": 0.67,
+      "years_covered": 10
+    },
+    {
+      "ticker": "AZO",
+      "name": "AutoZone",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BA",
+      "name": "Boeing",
+      "sector": "Industrials",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BAC",
+      "name": "Bank of America",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BALL",
+      "name": "Ball Corporation",
+      "sector": "Materials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BAX",
+      "name": "Baxter International",
+      "sector": "Health Care",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BBY",
+      "name": "Best Buy",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BDX",
+      "name": "Becton Dickinson",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BEN",
+      "name": "Franklin Resources",
+      "sector": "Financials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BF.B",
+      "name": "Brown\u2013Forman",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BG",
+      "name": "Bunge Global",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.78,
+      "years_covered": 5
+    },
+    {
+      "ticker": "BIIB",
+      "name": "Biogen",
+      "sector": "Health Care",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BKNG",
+      "name": "Booking Holdings",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BKR",
+      "name": "Baker Hughes",
+      "sector": "Energy",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BLDR",
+      "name": "Builders FirstSource",
+      "sector": "Industrials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BLK",
+      "name": "BlackRock",
+      "sector": "Financials",
+      "coverage_pct": 0.85,
+      "years_covered": 4
+    },
+    {
+      "ticker": "BMY",
+      "name": "Bristol Myers Squibb",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BNY",
+      "name": "BNY Mellon",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BR",
+      "name": "Broadridge Financial Solutions",
+      "sector": "Industrials",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BRK.B",
+      "name": "Berkshire Hathaway",
+      "sector": "Financials",
+      "coverage_pct": 0.4,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BRO",
+      "name": "Brown & Brown",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BSX",
+      "name": "Boston Scientific",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BX",
+      "name": "Blackstone Inc.",
+      "sector": "Financials",
+      "coverage_pct": 0.66,
+      "years_covered": 10
+    },
+    {
+      "ticker": "BXP",
+      "name": "BXP, Inc.",
+      "sector": "Real Estate",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "C",
+      "name": "Citigroup",
+      "sector": "Financials",
+      "coverage_pct": 0.74,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CAH",
+      "name": "Cardinal Health",
+      "sector": "Health Care",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CARR",
+      "name": "Carrier Global",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 8
+    },
+    {
+      "ticker": "CASY",
+      "name": "Casey's",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.74,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CAT",
+      "name": "Caterpillar Inc.",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CB",
+      "name": "Chubb Limited",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CBOE",
+      "name": "Cboe Global Markets",
+      "sector": "Financials",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CBRE",
+      "name": "CBRE Group",
+      "sector": "Real Estate",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CCI",
+      "name": "Crown Castle",
+      "sector": "Real Estate",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CCL",
+      "name": "Carnival Corporation",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CDNS",
+      "name": "Cadence Design Systems",
+      "sector": "Information Technology",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CDW",
+      "name": "CDW Corporation",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CEG",
+      "name": "Constellation Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.8667,
+      "years_covered": 6
+    },
+    {
+      "ticker": "CF",
+      "name": "CF Industries",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CFG",
+      "name": "Citizens Financial Group",
+      "sector": "Financials",
+      "coverage_pct": 0.64,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CHD",
+      "name": "Church & Dwight",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CHRW",
+      "name": "C.H. Robinson",
+      "sector": "Industrials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CHTR",
+      "name": "Charter Communications",
+      "sector": "Communication Services",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CI",
+      "name": "Cigna",
+      "sector": "Health Care",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CIEN",
+      "name": "Ciena",
+      "sector": "Information Technology",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CINF",
+      "name": "Cincinnati Financial",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CL",
+      "name": "Colgate-Palmolive",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CLX",
+      "name": "Clorox",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CMCSA",
+      "name": "Comcast",
+      "sector": "Communication Services",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CME",
+      "name": "CME Group",
+      "sector": "Financials",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CMG",
+      "name": "Chipotle Mexican Grill",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CMI",
+      "name": "Cummins",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CMS",
+      "name": "CMS Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.87,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CNC",
+      "name": "Centene Corporation",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CNP",
+      "name": "CenterPoint Energy",
+      "sector": "Utilities",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "COF",
+      "name": "Capital One",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent Corp.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "COIN",
+      "name": "Coinbase",
+      "sector": "Financials",
+      "coverage_pct": 0.8143,
+      "years_covered": 7
+    },
+    {
+      "ticker": "COO",
+      "name": "Cooper Companies (The)",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "COP",
+      "name": "ConocoPhillips",
+      "sector": "Energy",
+      "coverage_pct": 0.76,
+      "years_covered": 10
+    },
+    {
+      "ticker": "COR",
+      "name": "Cencora",
+      "sector": "Health Care",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "COST",
+      "name": "Costco",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CPAY",
+      "name": "Corpay",
+      "sector": "Financials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CPRT",
+      "name": "Copart",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CPT",
+      "name": "Camden Property Trust",
+      "sector": "Real Estate",
+      "coverage_pct": 0.79,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CRH",
+      "name": "CRH plc",
+      "sector": "Materials",
+      "coverage_pct": 0.96,
+      "years_covered": 5
+    },
+    {
+      "ticker": "CRL",
+      "name": "Charles River Laboratories",
+      "sector": "Health Care",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CRM",
+      "name": "Salesforce",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CRWD",
+      "name": "CrowdStrike",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8444,
+      "years_covered": 9
+    },
+    {
+      "ticker": "CSCO",
+      "name": "Cisco",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CSGP",
+      "name": "CoStar Group",
+      "sector": "Real Estate",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CSX",
+      "name": "CSX Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CTAS",
+      "name": "Cintas",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CTSH",
+      "name": "Cognizant",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CTVA",
+      "name": "Corteva",
+      "sector": "Materials",
+      "coverage_pct": 0.8,
+      "years_covered": 8
+    },
+    {
+      "ticker": "CVNA",
+      "name": "Carvana",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.75,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CVS",
+      "name": "CVS Health",
+      "sector": "Health Care",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "CVX",
+      "name": "Chevron Corporation",
+      "sector": "Energy",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "D",
+      "name": "Dominion Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DAL",
+      "name": "Delta Air Lines",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DASH",
+      "name": "DoorDash",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.675,
+      "years_covered": 8
+    },
+    {
+      "ticker": "DD",
+      "name": "DuPont",
+      "sector": "Materials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DDOG",
+      "name": "Datadog",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8,
+      "years_covered": 9
+    },
+    {
+      "ticker": "DE",
+      "name": "Deere & Company",
+      "sector": "Industrials",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DECK",
+      "name": "Deckers Brands",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.87,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DG",
+      "name": "Dollar General",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DGX",
+      "name": "Quest Diagnostics",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DHI",
+      "name": "D. R. Horton",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DHR",
+      "name": "Danaher Corporation",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DIS",
+      "name": "Walt Disney Company (The)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.8667,
+      "years_covered": 9
+    },
+    {
+      "ticker": "DLR",
+      "name": "Digital Realty",
+      "sector": "Real Estate",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DLTR",
+      "name": "Dollar Tree",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DOC",
+      "name": "Healthpeak Properties",
+      "sector": "Real Estate",
+      "coverage_pct": 0.79,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DOV",
+      "name": "Dover Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DOW",
+      "name": "Dow Inc.",
+      "sector": "Materials",
+      "coverage_pct": 0.7667,
+      "years_covered": 9
+    },
+    {
+      "ticker": "DPZ",
+      "name": "Domino's",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.82,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DRI",
+      "name": "Darden Restaurants",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DTE",
+      "name": "DTE Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.8,
+      "years_covered": 8
+    },
+    {
+      "ticker": "DUK",
+      "name": "Duke Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DVA",
+      "name": "DaVita",
+      "sector": "Health Care",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DVN",
+      "name": "Devon Energy",
+      "sector": "Energy",
+      "coverage_pct": 0.76,
+      "years_covered": 10
+    },
+    {
+      "ticker": "DXCM",
+      "name": "Dexcom",
+      "sector": "Health Care",
+      "coverage_pct": 0.78,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EA",
+      "name": "Electronic Arts",
+      "sector": "Communication Services",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EBAY",
+      "name": "eBay Inc.",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ECHO",
+      "name": "EchoStar",
+      "sector": "Communication Services",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ECL",
+      "name": "Ecolab",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ED",
+      "name": "Consolidated Edison",
+      "sector": "Utilities",
+      "coverage_pct": 0.87,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EFX",
+      "name": "Equifax",
+      "sector": "Industrials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EG",
+      "name": "Everest Group",
+      "sector": "Financials",
+      "coverage_pct": 0.5,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EIX",
+      "name": "Edison International",
+      "sector": "Utilities",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EL",
+      "name": "Est\u00e9e Lauder Companies (The)",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ELV",
+      "name": "Elevance Health",
+      "sector": "Health Care",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EME",
+      "name": "Emcor",
+      "sector": "Industrials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EMR",
+      "name": "Emerson Electric",
+      "sector": "Industrials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EOG",
+      "name": "EOG Resources",
+      "sector": "Energy",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EQIX",
+      "name": "Equinix",
+      "sector": "Real Estate",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EQR",
+      "name": "Equity Residential",
+      "sector": "Real Estate",
+      "coverage_pct": 0.77,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EQT",
+      "name": "EQT Corporation",
+      "sector": "Energy",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ERIE",
+      "name": "Erie Indemnity",
+      "sector": "Financials",
+      "coverage_pct": 0.64,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ES",
+      "name": "Eversource Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ESS",
+      "name": "Essex Property Trust",
+      "sector": "Real Estate",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ETN",
+      "name": "Eaton Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ETR",
+      "name": "Entergy",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EVRG",
+      "name": "Evergy",
+      "sector": "Utilities",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EW",
+      "name": "Edwards Lifesciences",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EXC",
+      "name": "Exelon",
+      "sector": "Utilities",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EXE",
+      "name": "Expand Energy",
+      "sector": "Energy",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EXPD",
+      "name": "Expeditors International",
+      "sector": "Industrials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EXPE",
+      "name": "Expedia Group",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "EXR",
+      "name": "Extra Space Storage",
+      "sector": "Real Estate",
+      "coverage_pct": 0.76,
+      "years_covered": 10
+    },
+    {
+      "ticker": "F",
+      "name": "Ford Motor Company",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.85,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FANG",
+      "name": "Diamondback Energy",
+      "sector": "Energy",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FAST",
+      "name": "Fastenal",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FCX",
+      "name": "Freeport-McMoRan",
+      "sector": "Materials",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FDS",
+      "name": "FactSet",
+      "sector": "Financials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FDX",
+      "name": "FedEx",
+      "sector": "Industrials",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FDXF",
+      "name": "FedEx Freight",
+      "sector": "Industrials",
+      "coverage_pct": 0.0,
+      "years_covered": 0
+    },
+    {
+      "ticker": "FE",
+      "name": "FirstEnergy",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FFIV",
+      "name": "F5, Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FICO",
+      "name": "Fair Isaac",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FIS",
+      "name": "Fidelity National Information Services",
+      "sector": "Financials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FISV",
+      "name": "Fiserv",
+      "sector": "Financials",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FITB",
+      "name": "Fifth Third Bancorp",
+      "sector": "Financials",
+      "coverage_pct": 0.6625,
+      "years_covered": 8
+    },
+    {
+      "ticker": "FIX",
+      "name": "Comfort Systems USA",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FLEX",
+      "name": "Flex Ltd.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FOX",
+      "name": "Fox Corporation (Class B)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.6667,
+      "years_covered": 9
+    },
+    {
+      "ticker": "FOXA",
+      "name": "Fox Corporation (Class A)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.6667,
+      "years_covered": 9
+    },
+    {
+      "ticker": "FRT",
+      "name": "Federal Realty Investment Trust",
+      "sector": "Real Estate",
+      "coverage_pct": 0.74,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FSLR",
+      "name": "First Solar",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FTNT",
+      "name": "Fortinet",
+      "sector": "Information Technology",
+      "coverage_pct": 0.87,
+      "years_covered": 10
+    },
+    {
+      "ticker": "FTV",
+      "name": "Fortive",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GD",
+      "name": "General Dynamics",
+      "sector": "Industrials",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GDDY",
+      "name": "GoDaddy",
+      "sector": "Information Technology",
+      "coverage_pct": 0.79,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GE",
+      "name": "GE Aerospace",
+      "sector": "Industrials",
+      "coverage_pct": 0.75,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GEHC",
+      "name": "GE HealthCare",
+      "sector": "Health Care",
+      "coverage_pct": 0.96,
+      "years_covered": 5
+    },
+    {
+      "ticker": "GEN",
+      "name": "Gen Digital",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GEV",
+      "name": "GE Vernova",
+      "sector": "Industrials",
+      "coverage_pct": 0.95,
+      "years_covered": 4
+    },
+    {
+      "ticker": "GILD",
+      "name": "Gilead Sciences",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GIS",
+      "name": "General Mills",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GL",
+      "name": "Globe Life",
+      "sector": "Financials",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GLW",
+      "name": "Corning Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GM",
+      "name": "General Motors",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.76,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GNRC",
+      "name": "Generac",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GOOG",
+      "name": "Alphabet Inc. (Class C)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet Inc. (Class A)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GPC",
+      "name": "Genuine Parts Company",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GPN",
+      "name": "Global Payments",
+      "sector": "Financials",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GRMN",
+      "name": "Garmin",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GS",
+      "name": "Goldman Sachs",
+      "sector": "Financials",
+      "coverage_pct": 0.68,
+      "years_covered": 10
+    },
+    {
+      "ticker": "GWW",
+      "name": "W. W. Grainger",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HAL",
+      "name": "Halliburton",
+      "sector": "Energy",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HAS",
+      "name": "Hasbro",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HBAN",
+      "name": "Huntington Bancshares",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 8
+    },
+    {
+      "ticker": "HCA",
+      "name": "HCA Healthcare",
+      "sector": "Health Care",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HD",
+      "name": "Home Depot (The)",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HIG",
+      "name": "Hartford (The)",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HII",
+      "name": "Huntington Ingalls Industries",
+      "sector": "Industrials",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HLT",
+      "name": "Hilton Worldwide",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.74,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HON",
+      "name": "Honeywell Technologies",
+      "sector": "Industrials",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HONA",
+      "name": "Honeywell Aerospace",
+      "sector": "Industrials",
+      "coverage_pct": 0.0,
+      "years_covered": 0
+    },
+    {
+      "ticker": "HOOD",
+      "name": "Robinhood Markets",
+      "sector": "Financials",
+      "coverage_pct": 0.5571,
+      "years_covered": 7
+    },
+    {
+      "ticker": "HPE",
+      "name": "Hewlett Packard Enterprise",
+      "sector": "Information Technology",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HPQ",
+      "name": "HP Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HRL",
+      "name": "Hormel Foods",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HSIC",
+      "name": "Henry Schein",
+      "sector": "Health Care",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HST",
+      "name": "Host Hotels & Resorts",
+      "sector": "Real Estate",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HSY",
+      "name": "Hershey Company (The)",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HUBB",
+      "name": "Hubbell Incorporated",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HUM",
+      "name": "Humana",
+      "sector": "Health Care",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "HWM",
+      "name": "Howmet Aerospace",
+      "sector": "Industrials",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IBKR",
+      "name": "Interactive Brokers",
+      "sector": "Financials",
+      "coverage_pct": 0.54,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IBM",
+      "name": "IBM",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ICE",
+      "name": "Intercontinental Exchange",
+      "sector": "Financials",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IDXX",
+      "name": "Idexx Laboratories",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IEX",
+      "name": "IDEX Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IFF",
+      "name": "International Flavors & Fragrances",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "INCY",
+      "name": "Incyte",
+      "sector": "Health Care",
+      "coverage_pct": 0.83,
+      "years_covered": 10
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "INTU",
+      "name": "Intuit",
+      "sector": "Information Technology",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "INVH",
+      "name": "Invitation Homes",
+      "sector": "Real Estate",
+      "coverage_pct": 0.67,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IP",
+      "name": "International Paper",
+      "sector": "Materials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IQV",
+      "name": "IQVIA",
+      "sector": "Health Care",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IR",
+      "name": "Ingersoll Rand",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IRM",
+      "name": "Iron Mountain",
+      "sector": "Real Estate",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IT",
+      "name": "Gartner",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ITW",
+      "name": "Illinois Tool Works",
+      "sector": "Industrials",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "IVZ",
+      "name": "Invesco",
+      "sector": "Financials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "J",
+      "name": "Jacobs Solutions",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "JBHT",
+      "name": "J.B. Hunt",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "JBL",
+      "name": "Jabil",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "JCI",
+      "name": "Johnson Controls",
+      "sector": "Industrials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "JKHY",
+      "name": "Jack Henry & Associates",
+      "sector": "Financials",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "JNJ",
+      "name": "Johnson & Johnson",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "JPM",
+      "name": "JPMorgan Chase",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KDP",
+      "name": "Keurig Dr Pepper",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KEY",
+      "name": "KeyCorp",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KEYS",
+      "name": "Keysight Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KHC",
+      "name": "Kraft Heinz",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KIM",
+      "name": "Kimco Realty",
+      "sector": "Real Estate",
+      "coverage_pct": 0.77,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KKR",
+      "name": "KKR & Co.",
+      "sector": "Financials",
+      "coverage_pct": 0.38,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KMB",
+      "name": "Kimberly-Clark",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KMI",
+      "name": "Kinder Morgan",
+      "sector": "Energy",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KO",
+      "name": "Coca-Cola Company (The)",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KR",
+      "name": "Kroger",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "KVUE",
+      "name": "Kenvue",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.96,
+      "years_covered": 5
+    },
+    {
+      "ticker": "L",
+      "name": "Loews Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.66,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LDOS",
+      "name": "Leidos",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LEN",
+      "name": "Lennar",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.69,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LH",
+      "name": "Labcorp",
+      "sector": "Health Care",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LHX",
+      "name": "L3Harris",
+      "sector": "Industrials",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LII",
+      "name": "Lennox International",
+      "sector": "Industrials",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LIN",
+      "name": "Linde plc",
+      "sector": "Materials",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "sector": "Information Technology",
+      "coverage_pct": 0.89,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LLY",
+      "name": "Lilly (Eli)",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LMT",
+      "name": "Lockheed Martin",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LNT",
+      "name": "Alliant Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LOW",
+      "name": "Lowe's",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LULU",
+      "name": "Lululemon Athletica",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LUV",
+      "name": "Southwest Airlines",
+      "sector": "Industrials",
+      "coverage_pct": 0.78,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LVS",
+      "name": "Las Vegas Sands",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LYB",
+      "name": "LyondellBasell",
+      "sector": "Materials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "LYV",
+      "name": "Live Nation Entertainment",
+      "sector": "Communication Services",
+      "coverage_pct": 0.62,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MA",
+      "name": "Mastercard",
+      "sector": "Financials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MAA",
+      "name": "Mid-America Apartment Communities",
+      "sector": "Real Estate",
+      "coverage_pct": 0.61,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MAR",
+      "name": "Marriott International",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MAS",
+      "name": "Masco",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MCD",
+      "name": "McDonald's",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MCHP",
+      "name": "Microchip Technology",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MCK",
+      "name": "McKesson Corporation",
+      "sector": "Health Care",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MCO",
+      "name": "Moody's Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MDLZ",
+      "name": "Mondelez International",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MDT",
+      "name": "Medtronic",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MET",
+      "name": "MetLife",
+      "sector": "Financials",
+      "coverage_pct": 0.68,
+      "years_covered": 10
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "sector": "Communication Services",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MGM",
+      "name": "MGM Resorts",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MKC",
+      "name": "McCormick & Company",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MLM",
+      "name": "Martin Marietta Materials",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MMM",
+      "name": "3M",
+      "sector": "Industrials",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MNST",
+      "name": "Monster Beverage",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.72,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MO",
+      "name": "Altria",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MOS",
+      "name": "Mosaic Company (The)",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MPC",
+      "name": "Marathon Petroleum",
+      "sector": "Energy",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "sector": "Information Technology",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MRK",
+      "name": "Merck & Co.",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MRNA",
+      "name": "Moderna",
+      "sector": "Health Care",
+      "coverage_pct": 0.76,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MRSH",
+      "name": "Marsh McLennan",
+      "sector": "Financials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9714,
+      "years_covered": 7
+    },
+    {
+      "ticker": "MS",
+      "name": "Morgan Stanley",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MSCI",
+      "name": "MSCI Inc.",
+      "sector": "Financials",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MSI",
+      "name": "Motorola Solutions",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MTB",
+      "name": "M&T Bank",
+      "sector": "Financials",
+      "coverage_pct": 0.68,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MTD",
+      "name": "Mettler Toledo",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NCLH",
+      "name": "Norwegian Cruise Line Holdings",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.79,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NDAQ",
+      "name": "Nasdaq, Inc.",
+      "sector": "Financials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NDSN",
+      "name": "Nordson Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NEE",
+      "name": "NextEra Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NEM",
+      "name": "Newmont",
+      "sector": "Materials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NFLX",
+      "name": "Netflix",
+      "sector": "Communication Services",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NI",
+      "name": "NiSource",
+      "sector": "Utilities",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NKE",
+      "name": "Nike, Inc.",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NOC",
+      "name": "Northrop Grumman",
+      "sector": "Industrials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "sector": "Information Technology",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NRG",
+      "name": "NRG Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NSC",
+      "name": "Norfolk Southern",
+      "sector": "Industrials",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NTAP",
+      "name": "NetApp",
+      "sector": "Information Technology",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NTRS",
+      "name": "Northern Trust",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NUE",
+      "name": "Nucor",
+      "sector": "Materials",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NVDA",
+      "name": "Nvidia",
+      "sector": "Information Technology",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NVR",
+      "name": "NVR, Inc.",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NWS",
+      "name": "News Corp (Class B)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.69,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NWSA",
+      "name": "News Corp (Class A)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.69,
+      "years_covered": 10
+    },
+    {
+      "ticker": "NXPI",
+      "name": "NXP Semiconductors",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9778,
+      "years_covered": 9
+    },
+    {
+      "ticker": "O",
+      "name": "Realty Income",
+      "sector": "Real Estate",
+      "coverage_pct": 0.65,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ODFL",
+      "name": "Old Dominion",
+      "sector": "Industrials",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "OKE",
+      "name": "Oneok",
+      "sector": "Energy",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "OMC",
+      "name": "Omnicom Group",
+      "sector": "Communication Services",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ON",
+      "name": "ON Semiconductor",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ORCL",
+      "name": "Oracle Corporation",
+      "sector": "Information Technology",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ORLY",
+      "name": "O\u2019Reilly Automotive",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "OTIS",
+      "name": "Otis Worldwide",
+      "sector": "Industrials",
+      "coverage_pct": 0.875,
+      "years_covered": 8
+    },
+    {
+      "ticker": "OXY",
+      "name": "Occidental Petroleum",
+      "sector": "Energy",
+      "coverage_pct": 0.78,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PANW",
+      "name": "Palo Alto Networks",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PAYX",
+      "name": "Paychex",
+      "sector": "Industrials",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PCAR",
+      "name": "Paccar",
+      "sector": "Industrials",
+      "coverage_pct": 0.64,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PCG",
+      "name": "PG&E Corporation",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PEG",
+      "name": "Public Service Enterprise Group",
+      "sector": "Utilities",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PEP",
+      "name": "PepsiCo",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PFE",
+      "name": "Pfizer",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PFG",
+      "name": "Principal Financial Group",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PG",
+      "name": "Procter & Gamble",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PGR",
+      "name": "Progressive Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.66,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PH",
+      "name": "Parker Hannifin",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PHM",
+      "name": "PulteGroup",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.65,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PKG",
+      "name": "Packaging Corporation of America",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PLD",
+      "name": "Prologis",
+      "sector": "Real Estate",
+      "coverage_pct": 0.83,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 0.85,
+      "years_covered": 8
+    },
+    {
+      "ticker": "PM",
+      "name": "Philip Morris International",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PNC",
+      "name": "PNC Financial Services",
+      "sector": "Financials",
+      "coverage_pct": 0.54,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PNR",
+      "name": "Pentair",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PNW",
+      "name": "Pinnacle West Capital",
+      "sector": "Utilities",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PODD",
+      "name": "Insulet Corporation",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PPG",
+      "name": "PPG Industries",
+      "sector": "Materials",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PPL",
+      "name": "PPL Corporation",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PRU",
+      "name": "Prudential Financial",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PSA",
+      "name": "Public Storage",
+      "sector": "Real Estate",
+      "coverage_pct": 0.69,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PSKY",
+      "name": "Paramount Skydance Corporation",
+      "sector": "Communication Services",
+      "coverage_pct": 0.8,
+      "years_covered": 2
+    },
+    {
+      "ticker": "PSX",
+      "name": "Phillips 66",
+      "sector": "Energy",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PTC",
+      "name": "PTC Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PWR",
+      "name": "Quanta Services",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "PYPL",
+      "name": "PayPal",
+      "sector": "Financials",
+      "coverage_pct": 0.83,
+      "years_covered": 10
+    },
+    {
+      "ticker": "Q",
+      "name": "Qnity Electronics",
+      "sector": "Information Technology",
+      "coverage_pct": 0.7667,
+      "years_covered": 3
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RCL",
+      "name": "Royal Caribbean Group",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "REG",
+      "name": "Regency Centers",
+      "sector": "Real Estate",
+      "coverage_pct": 0.5222,
+      "years_covered": 9
+    },
+    {
+      "ticker": "REGN",
+      "name": "Regeneron Pharmaceuticals",
+      "sector": "Health Care",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RF",
+      "name": "Regions Financial Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.6167,
+      "years_covered": 6
+    },
+    {
+      "ticker": "RJF",
+      "name": "Raymond James Financial",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RL",
+      "name": "Ralph Lauren Corporation",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RMD",
+      "name": "ResMed",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ROK",
+      "name": "Rockwell Automation",
+      "sector": "Industrials",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ROL",
+      "name": "Rollins, Inc.",
+      "sector": "Industrials",
+      "coverage_pct": 0.78,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ROP",
+      "name": "Roper Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ROST",
+      "name": "Ross Stores",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RSG",
+      "name": "Republic Services",
+      "sector": "Industrials",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RTX",
+      "name": "RTX Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "RVTY",
+      "name": "Revvity",
+      "sector": "Health Care",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SBAC",
+      "name": "SBA Communications",
+      "sector": "Real Estate",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SBUX",
+      "name": "Starbucks",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SCHW",
+      "name": "Charles Schwab Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SHW",
+      "name": "Sherwin-Williams",
+      "sector": "Materials",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SJM",
+      "name": "J.M. Smucker Company (The)",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SLB",
+      "name": "Schlumberger",
+      "sector": "Energy",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Supermicro",
+      "sector": "Information Technology",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SNA",
+      "name": "Snap-on",
+      "sector": "Industrials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SNDK",
+      "name": "Sandisk",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9333,
+      "years_covered": 3
+    },
+    {
+      "ticker": "SNPS",
+      "name": "Synopsys",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SO",
+      "name": "Southern Company",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SOLV",
+      "name": "Solventum",
+      "sector": "Health Care",
+      "coverage_pct": 0.95,
+      "years_covered": 4
+    },
+    {
+      "ticker": "SPG",
+      "name": "Simon Property Group",
+      "sector": "Real Estate",
+      "coverage_pct": 0.72,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SPGI",
+      "name": "S&P Global",
+      "sector": "Financials",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SRE",
+      "name": "Sempra",
+      "sector": "Utilities",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "STE",
+      "name": "Steris",
+      "sector": "Health Care",
+      "coverage_pct": 0.98,
+      "years_covered": 10
+    },
+    {
+      "ticker": "STLD",
+      "name": "Steel Dynamics",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "STT",
+      "name": "State Street Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "STX",
+      "name": "Seagate Technology",
+      "sector": "Information Technology",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "STZ",
+      "name": "Constellation Brands",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SW",
+      "name": "Smurfit Westrock",
+      "sector": "Materials",
+      "coverage_pct": 0.95,
+      "years_covered": 4
+    },
+    {
+      "ticker": "SWK",
+      "name": "Stanley Black & Decker",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SWKS",
+      "name": "Skyworks Solutions",
+      "sector": "Information Technology",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SYF",
+      "name": "Synchrony Financial",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SYK",
+      "name": "Stryker Corporation",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "SYY",
+      "name": "Sysco",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.91,
+      "years_covered": 10
+    },
+    {
+      "ticker": "T",
+      "name": "AT&T",
+      "sector": "Communication Services",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TAP",
+      "name": "Molson Coors Beverage Company",
+      "sector": "Consumer Staples",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TDG",
+      "name": "TransDigm Group",
+      "sector": "Industrials",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TDY",
+      "name": "Teledyne Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TECH",
+      "name": "Bio-Techne",
+      "sector": "Health Care",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TEL",
+      "name": "TE Connectivity",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TER",
+      "name": "Teradyne",
+      "sector": "Information Technology",
+      "coverage_pct": 0.82,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TFC",
+      "name": "Truist Financial",
+      "sector": "Financials",
+      "coverage_pct": 0.65,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TGT",
+      "name": "Target Corporation",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TJX",
+      "name": "TJX Companies",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TKO",
+      "name": "TKO Group Holdings",
+      "sector": "Communication Services",
+      "coverage_pct": 0.68,
+      "years_covered": 5
+    },
+    {
+      "ticker": "TMO",
+      "name": "Thermo Fisher Scientific",
+      "sector": "Health Care",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TMUS",
+      "name": "T-Mobile US",
+      "sector": "Communication Services",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TPL",
+      "name": "Texas Pacific Land Corporation",
+      "sector": "Energy",
+      "coverage_pct": 0.65,
+      "years_covered": 8
+    },
+    {
+      "ticker": "TPR",
+      "name": "Tapestry, Inc.",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TRGP",
+      "name": "Targa Resources",
+      "sector": "Energy",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TRMB",
+      "name": "Trimble Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TROW",
+      "name": "T. Rowe Price",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TRV",
+      "name": "Travelers Companies (The)",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TSCO",
+      "name": "Tractor Supply",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TSLA",
+      "name": "Tesla, Inc.",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TSN",
+      "name": "Tyson Foods",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TT",
+      "name": "Trane Technologies",
+      "sector": "Industrials",
+      "coverage_pct": 0.95,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TTD",
+      "name": "Trade Desk (The)",
+      "sector": "Communication Services",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TTWO",
+      "name": "Take-Two Interactive",
+      "sector": "Communication Services",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TXN",
+      "name": "Texas Instruments",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TXT",
+      "name": "Textron",
+      "sector": "Industrials",
+      "coverage_pct": 0.63,
+      "years_covered": 10
+    },
+    {
+      "ticker": "TYL",
+      "name": "Tyler Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "UAL",
+      "name": "United Airlines Holdings",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "UBER",
+      "name": "Uber",
+      "sector": "Industrials",
+      "coverage_pct": 0.8667,
+      "years_covered": 9
+    },
+    {
+      "ticker": "UDR",
+      "name": "UDR, Inc.",
+      "sector": "Real Estate",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "UHS",
+      "name": "Universal Health Services",
+      "sector": "Health Care",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ULTA",
+      "name": "Ulta Beauty",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.82,
+      "years_covered": 10
+    },
+    {
+      "ticker": "UNH",
+      "name": "UnitedHealth Group",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "UNP",
+      "name": "Union Pacific Corporation",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "UPS",
+      "name": "United Parcel Service",
+      "sector": "Industrials",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "URI",
+      "name": "United Rentals",
+      "sector": "Industrials",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "USB",
+      "name": "U.S. Bancorp",
+      "sector": "Financials",
+      "coverage_pct": 0.54,
+      "years_covered": 10
+    },
+    {
+      "ticker": "V",
+      "name": "Visa Inc.",
+      "sector": "Financials",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VEEV",
+      "name": "Veeva Systems",
+      "sector": "Health Care",
+      "coverage_pct": 0.74,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VICI",
+      "name": "Vici Properties",
+      "sector": "Real Estate",
+      "coverage_pct": 0.8444,
+      "years_covered": 9
+    },
+    {
+      "ticker": "VLO",
+      "name": "Valero Energy",
+      "sector": "Energy",
+      "coverage_pct": 0.99,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VLTO",
+      "name": "Veralto",
+      "sector": "Industrials",
+      "coverage_pct": 0.94,
+      "years_covered": 5
+    },
+    {
+      "ticker": "VMC",
+      "name": "Vulcan Materials Company",
+      "sector": "Materials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VRSK",
+      "name": "Verisk Analytics",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VRSN",
+      "name": "Verisign",
+      "sector": "Information Technology",
+      "coverage_pct": 0.77,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv",
+      "sector": "Industrials",
+      "coverage_pct": 0.8778,
+      "years_covered": 9
+    },
+    {
+      "ticker": "VRTX",
+      "name": "Vertex Pharmaceuticals",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VST",
+      "name": "Vistra Corp.",
+      "sector": "Utilities",
+      "coverage_pct": 0.9,
+      "years_covered": 9
+    },
+    {
+      "ticker": "VTR",
+      "name": "Ventas",
+      "sector": "Real Estate",
+      "coverage_pct": 0.7,
+      "years_covered": 10
+    },
+    {
+      "ticker": "VTRS",
+      "name": "Viatris",
+      "sector": "Health Care",
+      "coverage_pct": 0.9375,
+      "years_covered": 8
+    },
+    {
+      "ticker": "VZ",
+      "name": "Verizon",
+      "sector": "Communication Services",
+      "coverage_pct": 0.85,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WAB",
+      "name": "Wabtec",
+      "sector": "Industrials",
+      "coverage_pct": 0.96,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WAT",
+      "name": "Waters Corporation",
+      "sector": "Health Care",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WBD",
+      "name": "Warner Bros. Discovery",
+      "sector": "Communication Services",
+      "coverage_pct": 0.85,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WDAY",
+      "name": "Workday, Inc.",
+      "sector": "Information Technology",
+      "coverage_pct": 0.75,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WDC",
+      "name": "Western Digital",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WEC",
+      "name": "WEC Energy Group",
+      "sector": "Utilities",
+      "coverage_pct": 0.97,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WELL",
+      "name": "Welltower",
+      "sector": "Real Estate",
+      "coverage_pct": 0.79,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WFC",
+      "name": "Wells Fargo",
+      "sector": "Financials",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WM",
+      "name": "Waste Management",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WMB",
+      "name": "Williams Companies",
+      "sector": "Energy",
+      "coverage_pct": 0.84,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WMT",
+      "name": "Walmart",
+      "sector": "Consumer Staples",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WRB",
+      "name": "W. R. Berkley Corporation",
+      "sector": "Financials",
+      "coverage_pct": 0.54,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WSM",
+      "name": "Williams-Sonoma, Inc.",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.92,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WST",
+      "name": "West Pharmaceutical Services",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WTW",
+      "name": "Willis Towers Watson",
+      "sector": "Financials",
+      "coverage_pct": 0.86,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WY",
+      "name": "Weyerhaeuser",
+      "sector": "Real Estate",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "WYNN",
+      "name": "Wynn Resorts",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.9,
+      "years_covered": 10
+    },
+    {
+      "ticker": "XEL",
+      "name": "Xcel Energy",
+      "sector": "Utilities",
+      "coverage_pct": 0.93,
+      "years_covered": 10
+    },
+    {
+      "ticker": "XOM",
+      "name": "ExxonMobil",
+      "sector": "Energy",
+      "coverage_pct": 0.6,
+      "years_covered": 10
+    },
+    {
+      "ticker": "XYL",
+      "name": "Xylem Inc.",
+      "sector": "Industrials",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "XYZ",
+      "name": "Block, Inc.",
+      "sector": "Financials",
+      "coverage_pct": 0.94,
+      "years_covered": 10
+    },
+    {
+      "ticker": "YUM",
+      "name": "Yum! Brands",
+      "sector": "Consumer Discretionary",
+      "coverage_pct": 0.88,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ZBH",
+      "name": "Zimmer Biomet",
+      "sector": "Health Care",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ZBRA",
+      "name": "Zebra Technologies",
+      "sector": "Information Technology",
+      "coverage_pct": 1.0,
+      "years_covered": 10
+    },
+    {
+      "ticker": "ZTS",
+      "name": "Zoetis",
+      "sector": "Health Care",
+      "coverage_pct": 0.8,
+      "years_covered": 10
+    }
+  ]
+}

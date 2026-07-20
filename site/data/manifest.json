@@ -1,5 +1,5 @@
 {
-  "updated_at": "14 Jul 2026 19:10 UTC",
+  "updated_at": "20 Jul 2026 09:16 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -2498,7 +2498,7 @@
       "ticker": "PAYX",
       "name": "Paychex",
       "sector": "Industrials",
-      "coverage_pct": 0.94,
+      "coverage_pct": 0.97,
       "years_covered": 10
     },
     {

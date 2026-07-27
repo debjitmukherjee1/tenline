@@ -442,46 +442,101 @@ def _year_lineage(prov, start, end, year):
     return {m: lin for m, lin in lineage.items() if lin and year.get(m) is not None}
 
 
+# The ASC 606 revenue-recognition standard (adopted ~FY2018-2019 industry-wide)
+# moved most filers from legacy revenue tags to a RevenueFromContractWithCustomer*
+# tag, sometimes with a year or two of back-and-forth in comparatives. That churn
+# is a benign, well-known accounting-presentation change — labelled as such rather
+# than presented as if the company did something idiosyncratic.
+_ASC606_NEW = {"RevenueFromContractWithCustomerExcludingAssessedTax",
+               "RevenueFromContractWithCustomerIncludingAssessedTax"}
+_ASC606_OLD = {"Revenues", "SalesRevenueNet", "SalesRevenueGoodsNet", "SalesRevenueServicesNet"}
+
+
+def _is_asc606(tag_set):
+    return bool(tag_set & _ASC606_NEW) and bool(tag_set & _ASC606_OLD)
+
+
 def _disclosure_changes(prov, periods):
     """FY-over-FY reporting-change flags: for each underlying concept, walk the
-    displayed fiscal periods oldest->newest and flag when the resolving tag or
-    unit changes between consecutive years — a change in HOW the line item is
-    reported, which shouldn't be read as a change in the business."""
+    displayed fiscal periods oldest->newest, detect when the resolving tag or unit
+    changes between consecutive years, then COLLAPSE runs of adjacent changes on
+    the same concept into a single grouped flag (a repeated tag flip across a few
+    years reads as one reporting-standard transition, not N separate events). The
+    exact tag for every individual year always remains visible in the per-metric
+    "Data & sources" lineage table — this only de-noises the summary flags."""
     events = []
     ordered = sorted(periods, key=lambda p: p[1])  # oldest -> newest
     for concept, per in prov.items():
         label = CONCEPT_LABELS.get(concept, concept)
-        prev = None
+        affects = _CONCEPT_AFFECTS.get(concept, [])
+
+        # 1) raw consecutive-period changes for this concept
+        raw, prev = [], None
         for (start, end) in ordered:
             key = end if concept in INST_TAGS else (start, end)
             rec = per.get(key)
             if rec is None:
                 continue
             if prev is not None:
-                fy_from, fy_to = str(_parse(prev["end"]).year), str(_parse(end).year)
                 pr = prev["rec"]
+                fy_from, fy_to = str(_parse(prev["end"]).year), str(_parse(end).year)
                 if rec["tag"] != pr["tag"]:
-                    events.append({
-                        "concept": concept, "label": label, "kind": "tag",
-                        "fy_from": fy_from, "fy_to": fy_to,
-                        "from": pr["tag"], "to": rec["tag"],
-                        "affects": _CONCEPT_AFFECTS.get(concept, []),
-                        "note": (f"{label}: reporting tag changed from {pr['tag']} to "
-                                 f"{rec['tag']} between FY{fy_from} and FY{fy_to} — a change in "
-                                 f"how the line item is tagged/classified in the filings "
-                                 f"(reclassification or taxonomy update), not necessarily a "
-                                 f"change in the underlying business."),
-                    })
+                    raw.append({"kind": "tag", "fy_from": fy_from, "fy_to": fy_to,
+                                "from": pr["tag"], "to": rec["tag"]})
                 elif rec["unit"] and pr["unit"] and rec["unit"] != pr["unit"]:
-                    events.append({
-                        "concept": concept, "label": label, "kind": "unit",
-                        "fy_from": fy_from, "fy_to": fy_to,
-                        "from": pr["unit"], "to": rec["unit"],
-                        "affects": _CONCEPT_AFFECTS.get(concept, []),
-                        "note": (f"{label}: reporting unit changed from {pr['unit']} to "
-                                 f"{rec['unit']} between FY{fy_from} and FY{fy_to}."),
-                    })
+                    raw.append({"kind": "unit", "fy_from": fy_from, "fy_to": fy_to,
+                                "from": pr["unit"], "to": rec["unit"]})
             prev = {"end": end, "rec": rec}
+        if not raw:
+            continue
+
+        # 2) cluster changes that sit within <=2 fiscal years of each other
+        #    (adjacent churn) — distant, unrelated changes stay separate flags.
+        clusters = [[raw[0]]]
+        for ch in raw[1:]:
+            if int(ch["fy_from"]) - int(clusters[-1][-1]["fy_to"]) <= 2:
+                clusters[-1].append(ch)
+            else:
+                clusters.append([ch])
+
+        # 3) one flag per cluster
+        for cl in clusters:
+            fy_from, fy_to = cl[0]["fy_from"], cl[-1]["fy_to"]
+            kind = "tag" if any(c["kind"] == "tag" for c in cl) else "unit"
+            seq = [cl[0]["from"]] + [c["to"] for c in cl]
+            distinct = list(dict.fromkeys(seq))
+            asc = concept == "revenue" and kind == "tag" and _is_asc606(set(distinct))
+
+            if len(cl) == 1:
+                c0 = cl[0]
+                if asc:
+                    note = (f"{label}: reporting tag changed from {c0['from']} to {c0['to']} at "
+                            f"FY{fy_to} — adoption of the ASC 606 revenue-recognition standard, an "
+                            f"accounting-presentation change, not a change in the business.")
+                elif kind == "tag":
+                    note = (f"{label}: reporting tag changed from {c0['from']} to {c0['to']} between "
+                            f"FY{fy_from} and FY{fy_to} — a change in how the line item is "
+                            f"tagged/classified in the filings (reclassification or taxonomy update), "
+                            f"not necessarily a change in the underlying business.")
+                else:
+                    note = (f"{label}: reporting unit changed from {c0['from']} to {c0['to']} "
+                            f"between FY{fy_from} and FY{fy_to}.")
+            else:
+                reason = ("the ASC 606 revenue-recognition transition — an accounting-presentation "
+                          "change, not a change in the business" if asc else
+                          "how the line item is tagged/classified varied (reclassifications or "
+                          "taxonomy updates), not necessarily a change in the business")
+                note = (f"{label}: reporting {kind} varied across FY{fy_from}–FY{fy_to} "
+                        f"({len(cl)} changes) — {reason}. See “Data & sources” for the "
+                        f"exact tag each year.")
+
+            events.append({
+                "concept": concept, "label": label, "kind": kind,
+                "fy_from": fy_from, "fy_to": fy_to,
+                "from": distinct[0], "to": distinct[-1], "count": len(cl),
+                "asc606": asc, "affects": affects, "note": note,
+            })
+
     events.sort(key=lambda e: (e["fy_to"], e["label"]), reverse=True)  # newest first
     return events
 

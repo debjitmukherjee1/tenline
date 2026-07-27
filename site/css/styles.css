@@ -167,3 +167,110 @@ footer .sibling-links a { margin: 0 .4rem; }
   .chart-canvas-wrap { height: 200px; }
   .pilot-grid { grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); }
 }
+
+/* ============================================================================
+   Provenance & disclosure-change layer
+   ========================================================================== */
+
+/* Reporting-change flag glyph */
+.disc-badge {
+  color: var(--accent);
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Top-of-page summary of all fiscal-year reporting changes */
+.disclosure-panel {
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: var(--accent-wash);
+  padding: .7rem .9rem;
+  margin: 0 0 1.4rem;
+}
+.disclosure-panel > summary {
+  cursor: pointer;
+  font-size: .9rem;
+  color: var(--ink);
+  list-style: none;
+}
+.disclosure-panel > summary::-webkit-details-marker { display: none; }
+.disclosure-panel > summary::before { content: "▸ "; color: var(--ink-dim); }
+.disclosure-panel[open] > summary::before { content: "▾ "; }
+.disclosure-list { margin: .7rem 0 .2rem; padding: 0; list-style: none; }
+.disclosure-list li {
+  display: grid;
+  grid-template-columns: 1.1rem auto 1fr;
+  gap: .4rem .55rem;
+  align-items: baseline;
+  padding: .4rem 0;
+  border-top: 1px dashed var(--line-soft);
+  font-size: .86rem;
+  line-height: 1.4;
+}
+.disc-when { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: .78rem; color: var(--ink-dim); white-space: nowrap; }
+.disc-text { color: var(--ink); }
+
+/* Per-chart inline disclosure callout */
+.chart-disc {
+  margin-top: .6rem;
+  border-top: 1px dashed var(--line-soft);
+  padding-top: .5rem;
+}
+.chart-disc-row {
+  font-size: .76rem;
+  color: var(--ink-dim);
+  line-height: 1.4;
+  margin-top: .25rem;
+}
+
+/* Expandable per-metric lineage table */
+.prov-panel {
+  margin-top: .7rem;
+  border-top: 1px solid var(--line-soft);
+  padding-top: .5rem;
+}
+.prov-panel > summary {
+  cursor: pointer;
+  font-size: .78rem;
+  color: var(--accent);
+  list-style: none;
+}
+.prov-panel > summary::-webkit-details-marker { display: none; }
+.prov-panel > summary::before { content: "▸ "; }
+.prov-panel[open] > summary::before { content: "▾ "; }
+.prov-body { overflow-x: auto; margin-top: .55rem; }
+.prov-metric { font-size: .8rem; font-weight: 600; color: var(--ink); margin: .7rem 0 .3rem; }
+.prov-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: .74rem;
+  margin-bottom: .3rem;
+}
+.prov-table th, .prov-table td {
+  text-align: left;
+  padding: .3rem .5rem;
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+.prov-table th { color: var(--ink-dim); font-weight: 600; white-space: nowrap; }
+.prov-table td.num, .prov-table th.num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.prov-table td.rule { font-style: italic; color: var(--ink-dim); min-width: 12ch; }
+.prov-table td.filing a { font-family: ui-monospace, "SFMono-Regular", Menlo, monospace; font-size: .72rem; }
+.prov-table .tag {
+  display: inline-block;
+  font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
+  font-size: .68rem;
+  background: var(--surface-2);
+  border: 1px solid var(--line-soft);
+  border-radius: 4px;
+  padding: .02rem .3rem;
+  margin: 0 .15rem .15rem 0;
+  color: var(--ink);
+  word-break: break-all;
+}
+.prov-note { font-size: .72rem; color: var(--ink-dim); font-style: italic; margin: .4rem 0 0; }
+
+@media (prefers-reduced-motion: reduce) {
+  .disclosure-panel, .prov-panel { transition: none; }
+}

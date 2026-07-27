@@ -281,8 +281,215 @@ def _decade_summary(years):
     }
 
 
+# ============================================================================
+# PROVENANCE / LINEAGE (additive) — for every displayed metric, capture the
+# exact filing fact(s) behind it: us-gaap tag, unit, SEC accession, form and
+# filed date, plus the transformation rule used. This mirrors the SAME
+# 10-K-first / earliest-filed selection the value pipeline uses (via
+# _dedupe_best), so a lineage record always points at the identical fact that
+# produced the displayed number. None of this changes any metric value.
+# ============================================================================
+
+CONCEPT_LABELS = {
+    "revenue": "Revenue", "cost_of_revenue": "Cost of revenue",
+    "gross_profit": "Gross profit", "operating_income": "Operating income",
+    "net_income": "Net income", "eps_diluted": "Diluted EPS",
+    "diluted_shares": "Diluted share count", "cfo": "Operating cash flow",
+    "capex": "Capital expenditures", "income_tax_expense": "Income tax expense",
+    "pretax_income": "Pre-tax income", "equity": "Stockholders' equity",
+    "cash": "Cash & equivalents",
+    "lt_debt_noncurrent": "Long-term debt (noncurrent)",
+    "lt_debt_current": "Long-term debt (current)",
+    "st_borrowings": "Short-term borrowings",
+}
+
+# Which displayed output metrics each underlying concept feeds — routes a
+# disclosure (tag/unit) change to the metric cards it actually affects.
+_CONCEPT_AFFECTS = {
+    "revenue": ["revenue", "gross_margin", "operating_margin", "net_margin", "fcf_margin"],
+    "cost_of_revenue": ["gross_margin"], "gross_profit": ["gross_margin"],
+    "operating_income": ["operating_margin", "roic"],
+    "net_income": ["net_margin", "roe"],
+    "eps_diluted": ["eps_diluted"], "diluted_shares": ["diluted_shares"],
+    "cfo": ["fcf_margin"], "capex": ["fcf_margin"],
+    "equity": ["roe", "roic", "net_debt_to_equity"],
+    "cash": ["roic", "net_debt_to_equity"],
+    "lt_debt_noncurrent": ["net_debt_to_equity", "roic"],
+    "lt_debt_current": ["net_debt_to_equity", "roic"],
+    "st_borrowings": ["net_debt_to_equity", "roic"],
+    "income_tax_expense": ["roic"], "pretax_income": ["roic"],
+}
+
+
+def _facts_with_unit(companyfacts, tag_name):
+    """Like _facts_for, but also returns the unit label (the key of the
+    largest unit bucket: 'USD', 'USD/shares', 'shares', ...)."""
+    node = companyfacts.get("facts", {}).get("us-gaap", {}).get(tag_name)
+    if not node:
+        return None, []
+    units = node.get("units", {})
+    if not units:
+        return None, []
+    unit, entries = max(units.items(), key=lambda kv: len(kv[1]))
+    return unit, entries
+
+
+def _prov_entry(tag_name, unit, e):
+    return {"tag": tag_name, "unit": unit, "accn": e.get("accn"),
+            "form": e.get("form"), "filed": e.get("filed"), "val": e.get("val")}
+
+
+def _resolve_prov_duration(companyfacts, tag_list):
+    """{(start,end): prov} using the same selection as _duration_facts_by_period."""
+    result = {}
+    for tag_name in tag_list:
+        unit, entries = _facts_with_unit(companyfacts, tag_name)
+        raw = [e for e in entries if _is_annual_form(e) and "start" in e]
+        by_period = {}
+        for e in raw:
+            span = (_parse(e["end"]) - _parse(e["start"])).days
+            if not (config.MIN_FY_DURATION_DAYS <= span <= config.MAX_FY_DURATION_DAYS):
+                continue
+            by_period.setdefault((e["start"], e["end"]), []).append(e)
+        for key, e in _dedupe_best(by_period).items():
+            result.setdefault(key, _prov_entry(tag_name, unit, e))
+    return result
+
+
+def _resolve_prov_instant(companyfacts, tag_list):
+    """{end: prov} using the same selection as _instant_facts_by_end."""
+    result = {}
+    for tag_name in tag_list:
+        unit, entries = _facts_with_unit(companyfacts, tag_name)
+        raw = [e for e in entries if _is_annual_form(e) and "start" not in e]
+        by_end = {}
+        for e in raw:
+            by_end.setdefault(e["end"], []).append(e)
+        for end, e in _dedupe_best(by_end).items():
+            result.setdefault(end, _prov_entry(tag_name, unit, e))
+    return result
+
+
+def _collect_concept_prov(companyfacts, bank_derived_revenue):
+    """prov[concept][period_key] for every underlying concept. Duration
+    concepts key on (start,end); instant concepts key on end. Revenue falls
+    back to a synthetic 'derived' record for filers with no single combined
+    revenue tag (mirrors _derive_bank_revenue_by_period)."""
+    prov = {}
+    for concept, tag_list in DUR_TAGS.items():
+        prov[concept] = _resolve_prov_duration(companyfacts, tag_list)
+    for concept, tag_list in INST_TAGS.items():
+        prov[concept] = _resolve_prov_instant(companyfacts, tag_list)
+    if not prov["revenue"] and bank_derived_revenue:
+        prov["revenue"] = {
+            p: {"tag": "derived: net/gross interest income + noninterest income",
+                "unit": "USD", "accn": None, "form": "10-K", "filed": None, "val": v}
+            for p, v in bank_derived_revenue.items()
+        }
+    return prov
+
+
+def _input(prov, concept, key):
+    """A single lineage input {label, tag, unit, accn} for a concept at a
+    period, or None if that concept didn't resolve there."""
+    rec = prov.get(concept, {}).get(key)
+    if not rec:
+        return None
+    return {"label": CONCEPT_LABELS.get(concept, concept),
+            "tag": rec["tag"], "unit": rec["unit"], "accn": rec["accn"]}
+
+
+def _year_lineage(prov, start, end, year):
+    """Per-output-metric lineage for one fiscal year: {rule, inputs[]} for each
+    metric that actually resolved (is non-null) that year."""
+    dk, ik = (start, end), end
+
+    def d(concept):
+        return _input(prov, concept, dk)
+
+    def i(concept):
+        return _input(prov, concept, ik)
+
+    def rec(rule, inputs):
+        inputs = [x for x in inputs if x]
+        return {"rule": rule, "inputs": inputs} if inputs else None
+
+    gp, cor, rev = d("gross_profit"), d("cost_of_revenue"), d("revenue")
+    if gp:
+        gross = rec("Gross profit ÷ Revenue", [gp, rev])
+    elif cor and rev:
+        gross = rec("(Revenue − Cost of revenue) ÷ Revenue", [rev, cor])
+    else:
+        gross = None
+
+    lineage = {
+        "revenue": rec("As reported", [rev]),
+        "gross_margin": gross,
+        "operating_margin": rec("Operating income ÷ Revenue", [d("operating_income"), rev]),
+        "net_margin": rec("Net income ÷ Revenue", [d("net_income"), rev]),
+        "eps_diluted": rec("As reported", [d("eps_diluted")]),
+        "fcf_margin": rec("(Operating cash flow − CapEx) ÷ Revenue", [d("cfo"), d("capex"), rev]),
+        "roe": rec("Net income ÷ average stockholders' equity", [d("net_income"), i("equity")]),
+        "roic": rec("NOPAT ÷ invested capital (debt + equity − cash)",
+                    [d("operating_income"), d("income_tax_expense"), d("pretax_income"),
+                     i("equity"), i("cash"), i("lt_debt_noncurrent"),
+                     i("lt_debt_current"), i("st_borrowings")]),
+        "diluted_shares": rec("As reported", [d("diluted_shares")]),
+        "net_debt_to_equity": rec("(Total debt − cash) ÷ stockholders' equity",
+                                  [i("lt_debt_noncurrent"), i("lt_debt_current"),
+                                   i("st_borrowings"), i("cash"), i("equity")]),
+    }
+    return {m: lin for m, lin in lineage.items() if lin and year.get(m) is not None}
+
+
+def _disclosure_changes(prov, periods):
+    """FY-over-FY reporting-change flags: for each underlying concept, walk the
+    displayed fiscal periods oldest->newest and flag when the resolving tag or
+    unit changes between consecutive years — a change in HOW the line item is
+    reported, which shouldn't be read as a change in the business."""
+    events = []
+    ordered = sorted(periods, key=lambda p: p[1])  # oldest -> newest
+    for concept, per in prov.items():
+        label = CONCEPT_LABELS.get(concept, concept)
+        prev = None
+        for (start, end) in ordered:
+            key = end if concept in INST_TAGS else (start, end)
+            rec = per.get(key)
+            if rec is None:
+                continue
+            if prev is not None:
+                fy_from, fy_to = str(_parse(prev["end"]).year), str(_parse(end).year)
+                pr = prev["rec"]
+                if rec["tag"] != pr["tag"]:
+                    events.append({
+                        "concept": concept, "label": label, "kind": "tag",
+                        "fy_from": fy_from, "fy_to": fy_to,
+                        "from": pr["tag"], "to": rec["tag"],
+                        "affects": _CONCEPT_AFFECTS.get(concept, []),
+                        "note": (f"{label}: reporting tag changed from {pr['tag']} to "
+                                 f"{rec['tag']} between FY{fy_from} and FY{fy_to} — a change in "
+                                 f"how the line item is tagged/classified in the filings "
+                                 f"(reclassification or taxonomy update), not necessarily a "
+                                 f"change in the underlying business."),
+                    })
+                elif rec["unit"] and pr["unit"] and rec["unit"] != pr["unit"]:
+                    events.append({
+                        "concept": concept, "label": label, "kind": "unit",
+                        "fy_from": fy_from, "fy_to": fy_to,
+                        "from": pr["unit"], "to": rec["unit"],
+                        "affects": _CONCEPT_AFFECTS.get(concept, []),
+                        "note": (f"{label}: reporting unit changed from {pr['unit']} to "
+                                 f"{rec['unit']} between FY{fy_from} and FY{fy_to}."),
+                    })
+            prev = {"end": end, "rec": rec}
+    events.sort(key=lambda e: (e["fy_to"], e["label"]), reverse=True)  # newest first
+    return events
+
+
 def extract_company(companyfacts):
-    """Returns (years: list[dict] oldest-first, coverage: dict, decade: dict, sources: dict)."""
+    """Returns (years, coverage, decade, notes, sources, disclosure_changes).
+    Each year dict carries a `prov` map (per-metric lineage)."""
+    bank_derived_revenue = None
     rev_by_period, rev_sources = _duration_facts_by_period(companyfacts, tags.REVENUE)
     if not rev_by_period:
         # No single combined revenue tag resolved for ANY period -- rather
@@ -296,6 +503,7 @@ def extract_company(companyfacts):
         if derived:
             rev_by_period = derived
             rev_sources = {p: "derived: interest income + noninterest income" for p in derived}
+            bank_derived_revenue = derived
     # Oldest -> newest so the running `prior_equity` below actually refers to
     # the preceding (earlier) fiscal year as the loop advances -- iterating
     # newest-first while calling the running value "prior" was tried first
@@ -303,6 +511,10 @@ def extract_company(companyfacts):
     # equity instead of the preceding one, and "no prior year, fall back to
     # ending equity only" landed on the newest year instead of the oldest.
     periods = sorted(_canonical_periods(rev_by_period), key=lambda p: p[1])
+
+    # Provenance layer (additive): resolve the winning filing fact per concept
+    # per period, using the same selection as the value pipeline above.
+    concept_prov = _collect_concept_prov(companyfacts, bank_derived_revenue)
 
     dur_values, dur_sources = {"revenue": rev_by_period}, {"revenue": rev_sources}
     for metric, tag_list in DUR_TAGS.items():
@@ -373,7 +585,7 @@ def extract_company(companyfacts):
         net_debt = (total_debt - cash) if (total_debt is not None and cash is not None) else None
         net_debt_to_equity = (net_debt / equity) if (net_debt is not None and equity) else None
 
-        years.append({
+        yobj = {
             "fy": str(_parse(end).year),
             "period_start": start,
             "period_end": end,
@@ -389,7 +601,10 @@ def extract_company(companyfacts):
             "roic": roic,
             "diluted_shares": diluted_shares,
             "net_debt_to_equity": net_debt_to_equity,
-        })
+        }
+        # Per-metric lineage for this fiscal year (only for metrics shown).
+        yobj["prov"] = _year_lineage(concept_prov, start, end, yobj)
+        years.append(yobj)
         prior_equity = equity if equity is not None else prior_equity
 
     # `years` was already built oldest -> newest (see the sorted `periods`
@@ -405,4 +620,5 @@ def extract_company(companyfacts):
     decade = _decade_summary(years)
     notes = _coverage_notes(years)
     sources = {"revenue": rev_sources, **{k: v for k, v in dur_sources.items() if k != "revenue"}}
-    return years, coverage, decade, notes, sources
+    disclosure = _disclosure_changes(concept_prov, periods)
+    return years, coverage, decade, notes, sources, disclosure

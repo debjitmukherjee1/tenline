@@ -45,8 +45,8 @@ def _run_one_mock(ticker):
 
 def _run_one_live(ticker, cik10):
     companyfacts = edgar_client.fetch_companyfacts(ticker, cik10)
-    years, coverage, decade, notes, sources = extract.extract_company(companyfacts)
-    return years, coverage, decade, notes, sources
+    years, coverage, decade, notes, sources, disclosure = extract.extract_company(companyfacts)
+    return years, coverage, decade, notes, sources, disclosure
 
 
 def main():
@@ -90,7 +90,7 @@ def main():
                             "total": len(years) * len(extract.OUTPUT_METRICS)}
                 coverage["pct"] = round(coverage["resolved"] / coverage["total"], 4)
                 decade = extract._decade_summary(years)
-                notes, sources = {}, {}
+                notes, sources, disclosure = {}, {}, []
             else:
                 if not cik10:
                     raise ValueError(f"no CIK found for ticker {ticker}")
@@ -98,7 +98,7 @@ def main():
                     cache_path = os.path.join(config.COMPANYFACTS_CACHE_DIR, f"{ticker}.json")
                     if os.path.exists(cache_path):
                         os.remove(cache_path)
-                years, coverage, decade, notes, sources = _run_one_live(ticker, cik10)
+                years, coverage, decade, notes, sources, disclosure = _run_one_live(ticker, cik10)
                 all_sources[ticker] = sources
         except Exception as e:
             print(f"  ! {ticker}: FAILED ({e})", file=sys.stderr)
@@ -114,6 +114,7 @@ def main():
             "decade": decade,
             "coverage": coverage,
             "notes": notes,
+            "disclosure_changes": disclosure,
             "source": "mock" if config.MOCK_MODE else "live",
             "updated_at": updated,
         }

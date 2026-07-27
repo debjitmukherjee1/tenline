@@ -1,5 +1,14 @@
 /* Tenline — company page. 100% static: reads one pre-computed JSON file for
-   the requested ticker, renders with Chart.js. No runtime API calls. */
+   the requested ticker, renders with Chart.js. No runtime API calls.
+
+   Provenance & disclosure layer: each company JSON now carries, per fiscal
+   year, a `prov` map (per-metric lineage — the us-gaap tag(s), unit, SEC
+   accession and transformation rule behind every displayed number), plus a
+   top-level `disclosure_changes` list (fiscal-year-over-year reporting
+   changes: a tag/unit switch a company made in HOW it reports a line item,
+   which shouldn't be mistaken for a change in the business). Both are surfaced
+   here so a reader can verify a number against the source filing without
+   re-deriving it. Older data files without these fields degrade gracefully. */
 
 const params = new URLSearchParams(window.location.search);
 const ticker = (params.get("t") || "").toUpperCase();
@@ -17,9 +26,41 @@ function fmtUSD(v) {
 }
 function fmtUSD$(v) { return v === null || v === undefined ? "—" : "$" + fmtUSD(v); }
 function fmtPct(v, d = 1) { return v === null || v === undefined ? "—" : (v * 100).toFixed(d) + "%"; }
+function fmtPct2(v) { return fmtPct(v, 1); }
 function fmtShares(v) { return v === null || v === undefined ? "—" : fmtUSD(v); }
 function fmtRatio(v) { return v === null || v === undefined ? "—" : v.toFixed(2) + "x"; }
 function signCls(v) { return v > 0.0001 ? "pos" : v < -0.0001 ? "neg" : "flat"; }
+
+/* ---- provenance helpers ------------------------------------------------- */
+const METRIC_FMT = {
+  revenue: fmtUSD$, gross_margin: fmtPct2, operating_margin: fmtPct2, net_margin: fmtPct2,
+  eps_diluted: v => v == null ? "—" : "$" + v.toFixed(2), fcf: fmtUSD$, fcf_margin: fmtPct2,
+  roe: fmtPct2, roic: fmtPct2, diluted_shares: fmtShares, net_debt_to_equity: fmtRatio,
+};
+const METRIC_LABEL = {
+  revenue: "Revenue", gross_margin: "Gross margin", operating_margin: "Operating margin",
+  net_margin: "Net margin", eps_diluted: "EPS (diluted)", fcf: "Free cash flow",
+  fcf_margin: "FCF margin", roe: "ROE", roic: "ROIC", diluted_shares: "Diluted shares",
+  net_debt_to_equity: "Net debt / equity",
+};
+
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"]/g,
+    c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+// Deep-link to the exact filing on EDGAR from a bare accession number.
+function edgarFilingUrl(cik, accn) {
+  if (!cik || !accn) return null;
+  const cikInt = parseInt(cik, 10);
+  const bare = accn.replace(/-/g, "");
+  return `https://www.sec.gov/Archives/edgar/data/${cikInt}/${bare}/${esc(accn)}-index.htm`;
+}
+// Short "us-gaap:Tag" chip, but pass derived/computed strings through as-is.
+function tagChip(tag) {
+  if (!tag) return "—";
+  if (tag.startsWith("derived")) return esc(tag);
+  return "us-gaap:" + esc(tag);
+}
 
 async function boot() {
   const app = document.getElementById("app");
@@ -48,16 +89,18 @@ function render(d) {
   const labels = years.map(y => y.fy);
   const notes = d.notes || {};
   const decade = d.decade || {};
+  const disclosures = d.disclosure_changes || [];
+  const cik = d.cik;
 
   app.innerHTML = `
     <div class="company-head">
       <div class="company-title">
-        <span class="ticker-badge">${d.ticker}</span>
-        <h2>${d.name}</h2>
-        <span class="sector-tag">${d.sector}</span>
+        <span class="ticker-badge">${esc(d.ticker)}</span>
+        <h2>${esc(d.name)}</h2>
+        <span class="sector-tag">${esc(d.sector)}</span>
       </div>
       <div class="company-links">
-        ${d.edgar_filings_url ? `<div><a href="${d.edgar_filings_url}" target="_blank" rel="noopener">Filings on EDGAR ↗</a></div>` : ""}
+        ${d.edgar_filings_url ? `<div><a href="${esc(d.edgar_filings_url)}" target="_blank" rel="noopener">Filings on EDGAR ↗</a></div>` : ""}
         <div class="muted small">${years.length} fiscal years · ${(d.coverage.pct * 100).toFixed(0)}% of metrics resolved</div>
       </div>
     </div>
@@ -84,9 +127,11 @@ function render(d) {
       </div>
     </div>
 
+    ${disclosureSummaryHtml(disclosures)}
+
     <div class="chart-grid" id="chart-grid"></div>
 
-    <p class="disclaimer">⚠ Personal / educational project, not investment advice, not a SEBI-registered research or advisory service. All figures are as filed with the SEC (source: <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK${d.cik}.json" target="_blank" rel="noopener">EDGAR XBRL companyfacts</a>) — a gap means the underlying filing didn't disclose that concept under a resolvable tag, never an estimate.</p>
+    <p class="disclaimer">⚠ Personal / educational project, not investment advice, not a SEBI-registered research or advisory service. All figures are as filed with the SEC (source: <a href="https://data.sec.gov/api/xbrl/companyfacts/CIK${esc(d.cik)}.json" target="_blank" rel="noopener">EDGAR XBRL companyfacts</a>) — a gap means the underlying filing didn't disclose that concept under a resolvable tag, never an estimate. Every metric's exact tag, unit, accession and formula is in its "Data & sources" panel.</p>
   `;
 
   const grid = document.getElementById("chart-grid");
@@ -112,12 +157,26 @@ function render(d) {
       footnote: "Debt here is long-term + short-term borrowings only — it excludes customer deposits, trading liabilities, and insurance reserves, so this ratio understates real leverage for banks, insurers, and other deposit-funded financials." },
   ];
 
-  specs.forEach((spec, i) => grid.appendChild(buildChartBlock(spec, years, labels, notes, i)));
+  specs.forEach((spec, i) => grid.appendChild(buildChartBlock(spec, years, labels, notes, disclosures, cik, i)));
 }
 
-function fmtPct2(v) { return fmtPct(v, 1); }
+/* Top-of-page summary of every fiscal-year reporting change detected. */
+function disclosureSummaryHtml(disclosures) {
+  if (!disclosures || !disclosures.length) return "";
+  const items = disclosures.map(e => `
+    <li>
+      <span class="disc-badge" title="Reporting change">⚑</span>
+      <span class="disc-when">FY${esc(e.fy_from)} → FY${esc(e.fy_to)}</span>
+      <span class="disc-text">${esc(e.note)}</span>
+    </li>`).join("");
+  return `
+    <details class="disclosure-panel" open>
+      <summary><span class="disc-badge">⚑</span> Reporting changes detected (${disclosures.length}) — how a line item is reported changed between years, not necessarily the business</summary>
+      <ul class="disclosure-list">${items}</ul>
+    </details>`;
+}
 
-function buildChartBlock(spec, years, labels, notes, i) {
+function buildChartBlock(spec, years, labels, notes, disclosures, cik, i) {
   const block = document.createElement("div");
   block.className = "chart-block";
   block.style.setProperty("--i", i);
@@ -128,6 +187,13 @@ function buildChartBlock(spec, years, labels, notes, i) {
 
   const cagrChipHtml = spec.cagrChip != null
     ? `<span class="cagr-chip">${fmtPct(spec.cagrChip)} CAGR</span>` : "";
+
+  // Disclosure events touching any metric shown in this block.
+  const blockDiscs = (disclosures || []).filter(e => (e.affects || []).some(m => allFields.includes(m)));
+  const discFlagHtml = blockDiscs.length ? `
+    <div class="chart-disc">
+      ${blockDiscs.map(e => `<div class="chart-disc-row"><span class="disc-badge">⚑</span> ${esc(e.note)}</div>`).join("")}
+    </div>` : "";
 
   if (allNull) {
     block.innerHTML = `
@@ -144,22 +210,91 @@ function buildChartBlock(spec, years, labels, notes, i) {
 
   block.innerHTML = `
     <div class="chart-head">
-      <div class="chart-title">${spec.title}${cagrChipHtml}</div>
+      <div class="chart-title">${spec.title}${cagrChipHtml}${blockDiscs.length ? ` <span class="disc-badge" title="A reporting change affects this metric — see below">⚑</span>` : ""}</div>
       ${legendHtml}
     </div>
     <div class="chart-canvas-wrap"><canvas id="${canvasId}"></canvas></div>
     ${spec.footnote ? `<p class="chart-footnote">${spec.footnote}</p>` : ""}
     ${relevantNotes.length ? `<p class="chart-footnote">${relevantNotes.map(k => notes[k]).join(" ")}</p>` : ""}
     ${hasPartialGap && !relevantNotes.length ? `<p class="chart-footnote">Gaps indicate a fiscal year not disclosed under a resolvable tag in that year's filing.</p>` : ""}
+    ${discFlagHtml}
+    ${provenancePanelHtml(spec, years, cik)}
   `;
 
   requestAnimationFrame(() => drawChart(canvasId, spec, years, labels));
   return block;
 }
 
+/* Expandable per-metric lineage table: FY · value · rule · source tag(s) ·
+   unit · filing. Reads year.prov[field] written by the pipeline. */
+function provenancePanelHtml(spec, years, cik) {
+  const fields = spec.series.map(s => s.field).filter(f => METRIC_FMT[f]);
+  const ordered = years.slice().reverse(); // newest first
+  const tables = fields.map(field => {
+    const rows = ordered.map(y => {
+      const val = METRIC_FMT[field] ? METRIC_FMT[field](y[field]) : (y[field] ?? "—");
+      const p = (y.prov || {})[field];
+      if (!p) {
+        return `<tr><td>${esc(y.fy)}</td><td class="num">${val}</td><td colspan="4" class="muted">— not disclosed —</td></tr>`;
+      }
+      const inputs = p.inputs || [];
+      const tags = inputs.map(inp => `<span class="tag" title="${esc(inp.label)}">${tagChip(inp.tag)}</span>`).join(" ");
+      const unit = inputs.length ? esc(inputs[0].unit || "") : "";
+      // Link the primary input's filing; note if inputs span multiple filings.
+      const accns = [...new Set(inputs.map(inp => inp.accn).filter(Boolean))];
+      let filing = "—";
+      if (accns.length) {
+        const url = edgarFilingUrl(cik, accns[0]);
+        filing = url ? `<a href="${url}" target="_blank" rel="noopener">${esc(accns[0])}</a>` : esc(accns[0]);
+        if (accns.length > 1) filing += ` <span class="muted">+${accns.length - 1}</span>`;
+      }
+      return `<tr>
+        <td>${esc(y.fy)}</td>
+        <td class="num">${val}</td>
+        <td class="rule">${esc(p.rule)}</td>
+        <td class="tags">${tags}</td>
+        <td>${unit}</td>
+        <td class="filing">${filing}</td>
+      </tr>`;
+    }).join("");
+    const title = fields.length > 1 ? `<div class="prov-metric">${esc(METRIC_LABEL[field] || field)}</div>` : "";
+    return `${title}
+      <table class="prov-table">
+        <thead><tr><th>FY</th><th class="num">Value</th><th>Rule</th><th>Source tag(s)</th><th>Unit</th><th>Filing</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>`;
+  }).join("");
+
+  return `
+    <details class="prov-panel">
+      <summary>Data &amp; sources — verify every number against its filing</summary>
+      <div class="prov-body">
+        ${tables}
+        <p class="prov-note">Each value traces to the exact fact as filed: its us-gaap taxonomy tag, unit, and the SEC accession of the 10-K it came from (click to open the filing on EDGAR). "Rule" is the transformation applied to the raw filing fact(s).</p>
+      </div>
+    </details>`;
+}
+
 function drawChart(canvasId, spec, years, labels) {
   const ctx = document.getElementById(canvasId);
   if (!ctx) return;
+
+  // Tooltip footer: show the source tag(s) behind the hovered fiscal year, so
+  // provenance is one hover away without opening the table.
+  const provAfterBody = (items) => {
+    if (!items || !items.length) return "";
+    const idx = items[0].dataIndex;
+    const y = years[idx];
+    if (!y || !y.prov) return "";
+    const lines = [];
+    spec.series.forEach(s => {
+      const p = y.prov[s.field];
+      if (!p || !p.inputs || !p.inputs.length) return;
+      const tags = [...new Set(p.inputs.map(inp => inp.tag))].join(", ");
+      lines.push(`source: ${tags}`);
+    });
+    return lines.length ? ["", ...[...new Set(lines)]] : "";
+  };
 
   const baseOpts = {
     responsive: true, maintainAspectRatio: false,
@@ -167,7 +302,10 @@ function drawChart(canvasId, spec, years, labels) {
     plugins: {
       legend: { display: false },
       tooltip: {
-        callbacks: { label: (item) => `${item.dataset.label}: ${spec.seriesFmt ? spec.seriesFmt[item.datasetIndex](item.raw) : spec.fmt(item.raw)}` }
+        callbacks: {
+          label: (item) => `${item.dataset.label}: ${spec.seriesFmt ? spec.seriesFmt[item.datasetIndex](item.raw) : spec.fmt(item.raw)}`,
+          afterBody: provAfterBody,
+        }
       }
     },
     scales: {

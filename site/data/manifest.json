@@ -1,5 +1,5 @@
 {
-  "updated_at": "03 Aug 2026 09:48 UTC",
+  "updated_at": "10 Aug 2026 07:43 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -475,7 +475,7 @@
       "ticker": "BR",
       "name": "Broadridge Financial Solutions",
       "sector": "Industrials",
-      "coverage_pct": 0.94,
+      "coverage_pct": 0.93,
       "years_covered": 10
     },
     {
@@ -1301,8 +1301,8 @@
       "ticker": "FDXF",
       "name": "FedEx Freight",
       "sector": "Industrials",
-      "coverage_pct": 0.0,
-      "years_covered": 0
+      "coverage_pct": 0.7,
+      "years_covered": 3
     },
     {
       "ticker": "FE",
@@ -1364,15 +1364,15 @@
       "ticker": "FOX",
       "name": "Fox Corporation (Class B)",
       "sector": "Communication Services",
-      "coverage_pct": 0.6667,
-      "years_covered": 9
+      "coverage_pct": 0.67,
+      "years_covered": 10
     },
     {
       "ticker": "FOXA",
       "name": "Fox Corporation (Class A)",
       "sector": "Communication Services",
-      "coverage_pct": 0.6667,
-      "years_covered": 9
+      "coverage_pct": 0.67,
+      "years_covered": 10
     },
     {
       "ticker": "FRT",
@@ -2407,14 +2407,14 @@
       "ticker": "NWS",
       "name": "News Corp (Class B)",
       "sector": "Communication Services",
-      "coverage_pct": 0.69,
+      "coverage_pct": 0.7,
       "years_covered": 10
     },
     {
       "ticker": "NWSA",
       "name": "News Corp (Class A)",
       "sector": "Communication Services",
-      "coverage_pct": 0.69,
+      "coverage_pct": 0.7,
       "years_covered": 10
     },
     {
@@ -2547,7 +2547,7 @@
       "ticker": "PG",
       "name": "Procter & Gamble",
       "sector": "Consumer Staples",
-      "coverage_pct": 0.94,
+      "coverage_pct": 0.95,
       "years_covered": 10
     },
     {
@@ -2932,7 +2932,7 @@
       "ticker": "STX",
       "name": "Seagate Technology",
       "sector": "Information Technology",
-      "coverage_pct": 0.96,
+      "coverage_pct": 0.98,
       "years_covered": 10
     },
     {

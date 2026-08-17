@@ -1,5 +1,5 @@
 {
-  "updated_at": "10 Aug 2026 07:43 UTC",
+  "updated_at": "17 Aug 2026 06:57 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -181,8 +181,8 @@
       "ticker": "AMCR",
       "name": "Amcor",
       "sector": "Materials",
-      "coverage_pct": 0.9778,
-      "years_covered": 9
+      "coverage_pct": 0.98,
+      "years_covered": 10
     },
     {
       "ticker": "AMD",
@@ -524,7 +524,7 @@
       "ticker": "CAH",
       "name": "Cardinal Health",
       "sector": "Health Care",
-      "coverage_pct": 0.84,
+      "coverage_pct": 0.82,
       "years_covered": 10
     },
     {
@@ -734,7 +734,7 @@
       "ticker": "COHR",
       "name": "Coherent Corp.",
       "sector": "Information Technology",
-      "coverage_pct": 0.98,
+      "coverage_pct": 0.96,
       "years_covered": 10
     },
     {

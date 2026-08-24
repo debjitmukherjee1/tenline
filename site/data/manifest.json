@@ -1,5 +1,5 @@
 {
-  "updated_at": "17 Aug 2026 06:57 UTC",
+  "updated_at": "24 Aug 2026 07:00 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -1987,7 +1987,7 @@
       "ticker": "LITE",
       "name": "Lumentum",
       "sector": "Information Technology",
-      "coverage_pct": 0.89,
+      "coverage_pct": 0.9,
       "years_covered": 10
     },
     {
@@ -2862,8 +2862,8 @@
       "ticker": "SNDK",
       "name": "Sandisk",
       "sector": "Information Technology",
-      "coverage_pct": 0.9333,
-      "years_covered": 3
+      "coverage_pct": 0.95,
+      "years_covered": 4
     },
     {
       "ticker": "SNPS",
@@ -2981,7 +2981,7 @@
       "ticker": "SYY",
       "name": "Sysco",
       "sector": "Consumer Staples",
-      "coverage_pct": 0.91,
+      "coverage_pct": 0.9,
       "years_covered": 10
     },
     {

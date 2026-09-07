@@ -1,5 +1,5 @@
 {
-  "updated_at": "31 Aug 2026 12:57 UTC",
+  "updated_at": "07 Sep 2026 11:49 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -2848,7 +2848,7 @@
       "ticker": "SMCI",
       "name": "Supermicro",
       "sector": "Information Technology",
-      "coverage_pct": 0.96,
+      "coverage_pct": 0.94,
       "years_covered": 10
     },
     {

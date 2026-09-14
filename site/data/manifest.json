@@ -1,5 +1,5 @@
 {
-  "updated_at": "07 Sep 2026 11:49 UTC",
+  "updated_at": "14 Sep 2026 12:04 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -1735,7 +1735,7 @@
       "ticker": "INTU",
       "name": "Intuit",
       "sector": "Information Technology",
-      "coverage_pct": 0.92,
+      "coverage_pct": 0.91,
       "years_covered": 10
     },
     {

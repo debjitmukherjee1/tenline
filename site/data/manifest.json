@@ -1,5 +1,5 @@
 {
-  "updated_at": "28 Sep 2026 13:09 UTC",
+  "updated_at": "05 Oct 2026 13:52 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -783,7 +783,7 @@
       "ticker": "CPRT",
       "name": "Copart",
       "sector": "Industrials",
-      "coverage_pct": 0.9,
+      "coverage_pct": 0.87,
       "years_covered": 10
     },
     {

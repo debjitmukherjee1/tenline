@@ -13,8 +13,8 @@
 const params = new URLSearchParams(window.location.search);
 const ticker = (params.get("t") || "").toUpperCase();
 
-const ACCENT = "#9c6b2e", ACCENT2 = "#7c5522", BULL = "#266b43", BEAR = "#963527", NEUTRAL = "#635c50";
-const AXIS_COLOR = "#9a8f79", GRID_COLOR = "rgba(43,36,26,.08)", FONT = "EB Garamond";
+const ACCENT = "#f3f3f1", ACCENT2 = "#8f9199", BULL = "#3ddc97", BEAR = "#ff6a4a", NEUTRAL = "#a8aab0";
+const AXIS_COLOR = "#8f9199", GRID_COLOR = "rgba(255,255,255,.08)", FONT = "Geist Mono";
 
 function fmtUSD(v) {
   if (v === null || v === undefined) return "—";
@@ -321,7 +321,8 @@ function drawChart(canvasId, spec, years, labels) {
       type: s.type,
       data: years.map(y => y[s.field]),
       borderColor: s.color,
-      backgroundColor: s.type === "bar" ? s.color + "cc" : "transparent",
+      backgroundColor: s.type === "bar" ? s.color + "73" : "transparent",
+      ...(s.type === "bar" ? { hoverBackgroundColor: s.color, borderRadius: 4, maxBarThickness: 34 } : {}),
       yAxisID: s.axis,
       borderWidth: s.type === "line" ? 2.4 : 1,
       pointRadius: s.type === "line" ? 2 : 0,
@@ -332,7 +333,7 @@ function drawChart(canvasId, spec, years, labels) {
     baseOpts.scales.y1 = { position: "right", ticks: { color: AXIS_COLOR, font: { family: FONT }, callback: v => fmtPct(v) }, grid: { display: false } };
     baseOpts.scales.y.ticks.callback = v => fmtUSD$(v);
     baseOpts.plugins.legend.display = true;
-    baseOpts.plugins.legend.labels = { color: "#6b6153", font: { family: FONT, size: 11 } };
+    baseOpts.plugins.legend.labels = { color: "#a8aab0", font: { family: FONT, size: 11 } };
     baseOpts.plugins.tooltip.callbacks.label = (item) => {
       const s = spec.series[item.datasetIndex];
       return `${s.label}: ${s.axis === "y1" ? fmtPct(item.raw) : fmtUSD$(item.raw)}`;
@@ -347,8 +348,9 @@ function drawChart(canvasId, spec, years, labels) {
       data: { labels, datasets: [{
         label: spec.series[0].label,
         data: years.map(y => y[spec.series[0].field]),
-        backgroundColor: spec.series[0].color + "cc",
-        borderRadius: 3,
+        backgroundColor: spec.series[0].color + "73",
+        hoverBackgroundColor: spec.series[0].color,
+        borderRadius: 4, maxBarThickness: 34,
       }] },
       options: baseOpts,
     });

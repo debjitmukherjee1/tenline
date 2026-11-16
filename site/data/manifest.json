@@ -1,5 +1,5 @@
 {
-  "updated_at": "09 Nov 2026 15:28 UTC",
+  "updated_at": "16 Nov 2026 15:05 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -2813,7 +2813,7 @@
       "ticker": "SBUX",
       "name": "Starbucks",
       "sector": "Consumer Discretionary",
-      "coverage_pct": 0.94,
+      "coverage_pct": 0.93,
       "years_covered": 10
     },
     {
@@ -2960,7 +2960,7 @@
       "ticker": "SWKS",
       "name": "Skyworks Solutions",
       "sector": "Information Technology",
-      "coverage_pct": 0.92,
+      "coverage_pct": 0.94,
       "years_covered": 10
     },
     {
@@ -3002,7 +3002,7 @@
       "ticker": "TDG",
       "name": "TransDigm Group",
       "sector": "Industrials",
-      "coverage_pct": 0.92,
+      "coverage_pct": 0.94,
       "years_covered": 10
     },
     {

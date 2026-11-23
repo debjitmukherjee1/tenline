@@ -1,5 +1,5 @@
 {
-  "updated_at": "16 Nov 2026 15:05 UTC",
+  "updated_at": "23 Nov 2026 17:35 UTC",
   "universe_as_of": "2026-07-14",
   "companies": [
     {
@@ -307,7 +307,7 @@
       "ticker": "ATO",
       "name": "Atmos Energy",
       "sector": "Utilities",
-      "coverage_pct": 0.95,
+      "coverage_pct": 0.96,
       "years_covered": 10
     },
     {
@@ -972,8 +972,8 @@
       "ticker": "DIS",
       "name": "Walt Disney Company (The)",
       "sector": "Communication Services",
-      "coverage_pct": 0.8667,
-      "years_covered": 9
+      "coverage_pct": 0.87,
+      "years_covered": 10
     },
     {
       "ticker": "DLR",
@@ -2673,7 +2673,7 @@
       "ticker": "PTC",
       "name": "PTC Inc.",
       "sector": "Information Technology",
-      "coverage_pct": 0.96,
+      "coverage_pct": 0.98,
       "years_covered": 10
     },
     {

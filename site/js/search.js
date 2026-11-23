@@ -1,3 +1,4 @@
+const escQ = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 /* Tenline — search landing page. 100% static: reads manifest.json once,
    filters/keyboard-navigates client-side, no runtime API calls. */
 
@@ -52,7 +53,7 @@ function renderResults() {
   const input = document.getElementById("search-input");
   if (!state.matches.length) {
     box.innerHTML = state.query
-      ? `<div class="search-empty">No match for "${state.query}" in the current ${state.companies.length}-company universe.</div>`
+      ? `<div class="search-empty">No match for "${escQ(state.query)}" in the current ${state.companies.length}-company universe.</div>`
       : "";
     box.classList.toggle("open", !!state.query);
     input.setAttribute("aria-expanded", String(!!state.query));

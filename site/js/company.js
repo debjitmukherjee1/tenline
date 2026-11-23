@@ -11,7 +11,7 @@
    re-deriving it. Older data files without these fields degrade gracefully. */
 
 const params = new URLSearchParams(window.location.search);
-const ticker = (params.get("t") || "").toUpperCase();
+const ticker = ((params.get("t") || "").toUpperCase().match(/^[A-Z0-9.\-]{1,10}$/) || [""])[0];
 
 const ACCENT = "#f3f3f1", ACCENT2 = "#8f9199", BULL = "#3ddc97", BEAR = "#ff6a4a", NEUTRAL = "#a8aab0";
 const AXIS_COLOR = "#8f9199", GRID_COLOR = "rgba(255,255,255,.08)", FONT = "Geist Mono";
@@ -45,8 +45,8 @@ const METRIC_LABEL = {
 };
 
 function esc(s) {
-  return String(s == null ? "" : s).replace(/[&<>"]/g,
-    c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  return String(s == null ? "" : s).replace(/[&<>"']/g,
+    c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 }
 // Deep-link to the exact filing on EDGAR from a bare accession number.
 function edgarFilingUrl(cik, accn) {
@@ -78,7 +78,7 @@ async function boot() {
     render(data);
   } catch (e) {
     console.error(e);
-    app.innerHTML = `<p class="muted">Could not load data for "${ticker}". If running locally, serve with
+    app.innerHTML = `<p class="muted">Could not load data for "${esc(ticker)}". If running locally, serve with
       <code>python -m http.server</code>. <a href="index.html">Back to search</a>.</p>`;
   }
 }
